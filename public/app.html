@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html ng-app="foaly">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Foaly - Business Model Tutor</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:50px; }
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+  <body ng-controller="mainController">
+    <div class="container">
+      <div id="bmc-form" class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <form>
+            <div class="form-group">
+              <input ng-model='bmc.text' type="text" class="form-control input-lg text-center" placeholder="Put BMC data here">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" ng-click="sendBMC(bmc)">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="output" class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <h3>{{output.taggedStr}}</h3>
+            <h3>{{output.bmc}}</h3>
+            <h3>{{output.question}}</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
